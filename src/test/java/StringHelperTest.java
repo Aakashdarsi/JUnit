@@ -1,7 +1,7 @@
 import org.junit.jupiter.api.Test;
 import sg.nus.StringHelper;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class StringHelperTest {
 
@@ -34,4 +34,16 @@ public class StringHelperTest {
         assertEquals("CDAA",stringHelper.truncateAInFirst2Positions("CDAA"));
     }
 
+    @Test
+    public void testAreFirstAndLastTwoCharactersTheSame(){
+        StringHelper stringHelper = new StringHelper();
+        assertTrue(stringHelper.areFirstAndLastTwoCharactersTheSame("AAAA"));
+
+    }
+
+    @Test
+    public void testAreFirstandLastTwoCharactersAreNotSame(){
+        StringHelper stringHelper = new StringHelper();
+        assertFalse(stringHelper.areFirstAndLastTwoCharactersTheSame("ABCD"));
+    }
 }
