@@ -1,11 +1,18 @@
 import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import sg.nus.StringHelper;
 
 public class QuickBeforeAfterTest {
 
+
+
     StringHelper stringHelper;
+    @BeforeAll
+    public  static  void beforeAll(){
+        System.out.println("beforeAll");
+    }
     @BeforeEach
     public void setup(){
     System.out.println("Before All");
